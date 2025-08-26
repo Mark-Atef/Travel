@@ -5,15 +5,25 @@
 
 ---
 
-# Travel Website
+## 📖 Project Overview
 
-Travel — Responsive, mobile-first brochure site template for showcasing destinations, trips and news. Built using plain HTML, CSS and Bootstrap 5 (no build tools required).this WebSite showcases a clean layout, smooth animations, and a user-friendly experience for potential clients.
+Travel — A responsive, mobile-first brochure site template for showcasing destinations, trips, and news.  
+Built with **HTML, CSS, and Bootstrap 5** (no build tools required).  
+
+This project demonstrates:  
+- A clean, modern layout  
+- Smooth animations  
+- A user-friendly experience optimized for potential clients  
+
+Ideal for:  
+- Travel agencies  
+- Blogs  
+- Portfolio projects  
 
 ---
 
 ## Table of Contents
 
-- Project Overview
 - Live Demo
 - Features
 - Tech Stack
@@ -23,15 +33,6 @@ Travel — Responsive, mobile-first brochure site template for showcasing destin
 - Debugging & Troubleshooting
 - License
 - Credits & Contact
-
----
-
-## Project Overview
-
-- This is a static, responsive travel website template intended as a starting point for travel agencies, blogs, or portfolio projects.
-- this project is intentionally simple (no frontend frameworks) so it is easy to customize and deploy.
-
----
 
 ---
 
@@ -52,16 +53,20 @@ Live Demo
 
 ---
 
-## Tech Stack
+### Tech Stack
 
-- HTML5
-- CSS3 (custom + Bootstrap 5)
-- Bootstrap 5 (CSS + JS bundle)
-- Font Awesome (icons)
-- Vanilla JavaScript (small helpers/debug)
-- No build tools are required to run this project.
+- **HTML5**  
+- **CSS3** (custom + Bootstrap 5)  
+- **Bootstrap 5** (CSS + JS bundle)  
+- **Font Awesome** (icons)  
+- **Vanilla JavaScript** (lightweight helpers)  
+- **No build tools required** — runs directly in the browser
 
----
+```
+
+## 📂 Folder Structure
+
+```
 
 project-root/
 ├─ index.html
@@ -83,8 +88,10 @@ project-root/
 
 ## Local Setup / Installation
 1. Clone repository
-2.  Open the project folder.
-3. Double-click the index.html file to open it in your browser.
+   ```
+   
+3.  Open the project folder.
+4. Double-click the index.html file to open it in your browser.
 
 ---
 
@@ -95,6 +102,8 @@ project-root/
 
 - Convert hero and large images to modern formats (WebP/AVIF) and provide multiple sizes via srcset.
 - Preload the critical hero image to improve Largest Contentful Paint (LCP):
+
+```html
 
 <link rel="preload" href="/images/hero-1200.webp" as="image">
 
@@ -110,23 +119,33 @@ project-root/
 ---
 
 ---
-# Debugging & Troubleshooting
-## Horizontal scrollbar / overflow detection
+
+# 🐞 Debugging & Troubleshooting
+
+## Horizontal Scrollbar / Overflow Detection
 
 If you see a horizontal scrollbar on mobile, use this small script in the browser console — it highlights elements that overflow the viewport and logs them in a table:
 
+```js
 (function(){
-const w = document.documentElement.clientWidth || window.innerWidth;
-const offenders = [];
-document.querySelectorAll('*').forEach(el=>{
-const r = el.getBoundingClientRect();
-if (r.right > w || r.left < 0) {
-offenders.push({selector: el.tagName + (el.id ? '#'+el.id : (el.className ? '.'+el.className.split(' ').slice(0,3).join('.') : '')), left: Math.round(r.left), right: Math.round(r.right), width: Math.round(r.width)});
-el.style.outline = '3px solid magenta';
-}
-});
-console.table(offenders);
-console.log('Overflowing elements highlighted with magenta outline. Count:', offenders.length);
+  const w = document.documentElement.clientWidth || window.innerWidth;
+  const offenders = [];
+  document.querySelectorAll('*').forEach(el=>{
+    const r = el.getBoundingClientRect();
+    if (r.right > w || r.left < 0) {
+      offenders.push({
+        selector: el.tagName + 
+          (el.id ? '#' + el.id : 
+          (el.className ? '.' + el.className.split(' ').slice(0,3).join('.') : '')),
+        left: Math.round(r.left),
+        right: Math.round(r.right),
+        width: Math.round(r.width)
+      });
+      el.style.outline = '3px solid magenta';
+    }
+  });
+  console.table(offenders);
+  console.log('Overflowing elements highlighted with magenta outline. Count:', offenders.length);
 })();
 
 ## Common offenders:
