@@ -89,8 +89,7 @@ project-root/
 ## Local Setup / Installation
 1. Clone repository
    ```
-    https://github.com/Mark-Atef/Travel.git
-   
+   https://github.com/Mark-Atef/Travel.git
    ```
 3.  Open the project folder.
 4. Double-click the index.html file to open it in your browser.
