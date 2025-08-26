@@ -62,9 +62,9 @@ Live Demo
 - **Vanilla JavaScript** (lightweight helpers)  
 - **No build tools required** — runs directly in the browser
 
-```
-
 ## 📂 Folder Structure
+
+```
 
 project-root/
 ├─ index.html
