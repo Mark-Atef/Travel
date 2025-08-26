@@ -66,8 +66,6 @@ Live Demo
 
 ## 📂 Folder Structure
 
-```
-
 project-root/
 ├─ index.html
 ├─ css/
@@ -82,6 +80,8 @@ project-root/
 │ └─ (hero, cards, team, icons...)
 └─ README.md
 
+```
+
 ---
 
 ---
@@ -89,7 +89,9 @@ project-root/
 ## Local Setup / Installation
 1. Clone repository
    ```
+
    
+   ```
 3.  Open the project folder.
 4. Double-click the index.html file to open it in your browser.
 
@@ -106,6 +108,9 @@ project-root/
 ```html
 
 <link rel="preload" href="/images/hero-1200.webp" as="image">
+
+
+```
 
 - Defer non-critical JavaScript (defer attribute) and place script tags at the end of <body>.
 - Use server-side compression (Brotli/Gzip) and set long cache headers for static assets.
@@ -147,6 +152,9 @@ If you see a horizontal scrollbar on mobile, use this small script in the browse
   console.table(offenders);
   console.log('Overflowing elements highlighted with magenta outline. Count:', offenders.length);
 })();
+
+
+```
 
 ## Common offenders:
 
